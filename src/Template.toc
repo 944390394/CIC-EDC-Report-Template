@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}系统方案比较与设计}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}系统方案描述}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}方案论证与选择}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}主控制器件的论证与选择}{3}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}关键模块/技术方案的论证与选择}{3}{subsubsection.1.2.2}%
+\contentsline {section}{\numberline {2}系统理论分析与计算}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}核心理论/模型分析}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}关键算法分析}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}相关参数计算}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}电路与程序设计}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}电路设计}{4}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}核心模块电路（一）}{4}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}核心模块电路（二）}{4}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}程序设计}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}主程序设计思路}{4}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}程序流程图}{4}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}核心代码片段 (可选)}{4}{subsubsection.3.2.3}%
+\contentsline {section}{\numberline {4}测试方案与结果分析}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}测试方案}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}测试结果与数据}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}误差/性能分析}{5}{subsection.4.3}%
+\contentsline {section}{\numberline {5}结论}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}已达到的指标与功能}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}未达到指标与原因分析}{6}{subsection.5.2}%
+\contentsline {section}{\numberline {A}附录}{7}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}附录1}{7}{subsection.A.1}%

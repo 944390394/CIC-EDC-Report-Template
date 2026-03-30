@@ -1,0 +1,318 @@
+\documentclass[UTF8,zihao=-4]{ctexart}
+
+% --- 基础宏包 ---
+\usepackage{geometry} % 设置页边距
+\usepackage{graphicx} % 插入图片
+\usepackage{amsmath} % 数学公式
+\usepackage{amssymb} % 数学符号
+\usepackage{float} % 控制图表浮动位置, [H]表示强制在此处
+\usepackage{hyperref} % 生成超链接
+\usepackage{listings} % 插入代码
+\usepackage{xcolor} % 定义颜色
+\usepackage{booktabs} % 三线表宏包
+\usepackage{fancyhdr} % 自定义页眉页脚 (可选)
+\usepackage{iftex} % 判断编译引擎
+
+\ifPDFTeX
+% pdfTeX + ctex 使用 ctex 自带字体方案，无需 setCJKmainfont
+\else
+\setCJKmainfont{SimSun}
+\fi
+% --- 页面设置 ---
+\geometry{a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=2.5cm}
+\setlength{\baselineskip}{22pt} % 设置固定行距为 22pt
+
+% --- 超链接设置 ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=black,
+}
+
+% --- 页眉页脚设置 ---
+\pagestyle{fancy}                 % 启用 fancy 样式
+\fancyhf{}                        % 清空所有页眉页脚
+\renewcommand{\headrulewidth}{0pt} % 去掉页眉的横线
+\rfoot{\thepage}                  % 在页脚的右侧放置页码
+
+% --- 代码块样式定义 ---
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+%================================================
+%==============  文档开始  ======================
+%================================================
+\begin{document}
+
+\begin{center}
+    \huge \bfseries [题号]：[题目]
+    \vspace{1cm}
+\end{center}
+
+% --- 中文摘要（不超过300字，写完后删除提示语） ---
+\section*{摘要}
+\begin{quote}
+    \noindent
+    % 建议结构：
+    % 1) 系统概述（做了什么、用什么做）
+    % 2) 核心方法（关键算法/电路/控制策略）
+    % 3) 测试结论（达到哪些核心指标）
+    [此处填写中文摘要内容；完成后删除本行提示]
+
+    \vspace{0.6cm}
+    \noindent
+    \textbf{关键词：} [关键词1]；[关键词2]；[关键词3]（建议3--5个）
+\end{quote}
+
+\section*{Abstract}
+\begin{quote}
+    \noindent
+    % 要英文摘要，到时候一句一句的用翻译查
+    [Write your English abstract here.]
+
+    \vspace{0.6cm}
+    \noindent
+    \textbf{Key words:} [Keyword 1]; [Keyword 2]; [Keyword 3]
+\end{quote}
+
+\newpage
+\tableofcontents
+\newpage
+
+%================================================
+%==============  正文部分  ======================
+%================================================
+
+\section{系统方案比较与设计}
+    % 本章节对应评分标准中的“系统方案”，需要清晰描述整体设计思路和选择。
+\subsection{系统方案描述}
+    % 简要介绍系统的总体构成，说明各个模块（主控、电源、传感器、驱动、执行机构）的功能和它们之间的关系。
+    本系统以 [核心控制器型号] 微控制器为核心，主要由电源模块、主控模块、传感器模块、驱动模块以及执行机构等部分组成。系统整体功能框图如图\ref{fig:system_block}所示。
+    
+\begin{figure}[H]
+	\centering
+	% \includegraphics[width=0.8\linewidth]{../pic/your_block_diagram.png} % <-- 替换为你的系统框图文件
+	\caption{系统整体功能框图}
+	\label{fig:system_block}
+\end{figure}
+
+\subsection{方案论证与选择}
+    % 本部分非常重要，需要对关键器件和方案进行比较和选择，并说明理由。
+    % 写作提醒：
+    % - 每个“方案比较”至少写2种可选方案，并给出优缺点。
+    % - “最终选择”必须说明为什么更符合题目指标，而不是只写“成本低/简单”。
+\subsubsection{主控制器件的论证与选择}
+    % [ 论证模板 ]
+    % 方案一：[方案一名称]，如[具体型号]。优点：[优点]。缺点：[缺点]。
+    % 方案二：[方案二名称]，如[具体型号]。优点：[优点]。缺点：[缺点]。
+    % 结论：综合考虑本题对[性能指标，如计算能力]和[资源需求，如外设]的需求，选择[最终方案]作为主控芯片。
+    [ 此处填写主控选型的论证内容... ]
+
+\subsubsection{关键模块/技术方案的论证与选择}
+    % 针对系统中的关键技术点或核心模块进行选型比较。可添加多个子小节。
+    % [ 论证模板 ]
+    % 1. [关键模块一名称]
+    % 方案一：[方案一描述]。优点：[优点]。缺点：[缺点]。
+    % 方案二：[方案二描述]。优点：[优点]。缺点：[缺点]。
+    % 结论：结合[赛题要求]和[实际情况]，我们选择[最终方案]。
+    [ 此处填写关键模块的论证内容... ]
+
+\section{系统理论分析与计算}
+    % 本章节对应评分标准中的“理论分析”，需要展示核心算法的原理和必要的计算。
+\subsection{核心理论/模型分析}
+    % 描述系统所基于的核心理论模型，如控制理论、通信原理等。
+    % 给出必要的原理图和数学模型。
+    [ 此处填写核心理论分析... ]
+    
+    % \begin{figure}[H]
+    %     \centering
+    %     % \includegraphics[width=0.8\textwidth]{pic/your_model.png} % <-- 替换为你的理论模型图
+    %     \caption{系统理论模型图}
+    %     \label{fig:theory_model}
+    % \end{figure}
+    
+\subsection{关键算法分析}
+    % 详细介绍您所使用的关键算法。
+    % 例如：PID控制器设计、滤波器设计、数据融合算法、通信协议等。
+    % 给出关键的数学公式，并解释公式中各符号的含义。
+    [ 此处填写关键算法分析... ]
+    % 写作提醒：公式建议使用 LaTeX 公式环境，不建议直接输入法手打。
+    例如，某算法的关键公式如式\ref{eq:example}所示：
+    \begin{equation} \label{eq:example}
+        y(t) = K_p e(t) + K_i \int_0^t e(\tau)d\tau + K_d \frac{de(t)}{dt}
+    \end{equation}
+    其中，$e(t)$ 表示误差... % <-- 对公式和符号进行解释
+
+\subsection{相关参数计算}
+    % 根据题目要求和系统设计，进行必要的参数计算。
+    % 例如：根据场地尺寸计算运动参数；根据器件手册计算电路参数等。
+    % 这些计算结果是系统设计和实现的重要依据。
+    [ 此处填写相关参数的计算过程和结果... ]
+    % 写作提醒：建议给出“理论值-实测值-误差”的对应关系，便于后续测试分析。
+    
+\section{电路与程序设计}
+    % 本章节对应评分标准中的“电路与程序设计”。
+\subsection{电路设计}
+    % 分模块展示核心电路图，并简要说明设计思路。可添加多个子小节。
+    % 写作提醒：图题放在图下方；图中关键器件参数在正文交代清楚。
+\subsubsection{核心模块电路（一）}
+    % [ 此处填写第一个核心模块的电路设计说明，例如电源模块 ]
+    % \begin{figure}[H]
+    %     \centering
+    %     % \includegraphics[width=0.7\textwidth]{pic/your_circuit_1.png} % <-- 替换为你的电路原理图
+    %     \caption{模块一电路原理图}
+    %     \label{fig:circuit_1}
+    % \end{figure}
+    
+\subsubsection{核心模块电路（二）}
+    % [ 此处填写第二个核心模块的电路设计说明，例如驱动模块 ]
+    % \begin{figure}[H]
+    %     \centering
+    %     % \includegraphics[width=0.7\textwidth]{pic/your_circuit_2.png} % <-- 替换为你的电路原理图
+    %     \caption{模块二电路原理图}
+    %     \label{fig:circuit_2}
+    % \end{figure}
+
+\subsection{程序设计}
+\subsubsection{主程序设计思路}
+    % 描述主程序结构，建议使用状态机思想。
+    % 例如：系统上电后进行初始化，包括GPIO、定时器、串口、I2C等。然后进入待机状态，等待启动信号。
+    % 启动后，根据当前任务进入不同的主状态。在每个主状态下，通过子状态机来完成具体动作。
+    % 定时中断用于周期性地处理关键任务，如读取传感器、更新控制器状态等。
+    [ 此处填写主程序设计思路... ]
+
+\subsubsection{程序流程图}
+    % \begin{figure}[H]
+    %     \centering
+    %     % \includegraphics[width=0.6\textwidth]{pic/your_flowchart.png} % <-- 替换为你的主程序流程图
+    %     \caption{主程序流程图}
+    %     \label{fig:main_flowchart}
+    % \end{figure}
+    
+\subsubsection{核心代码片段 (可选)}
+% \begin{lstlisting}[language={[编程语言]}, caption={[代码功能描述]}, label={lst:code_example}]
+% // 在这里粘贴您的核心功能的代码
+% // 例如：
+% float function_example(float input) {
+%     // ...
+%     return output;
+% }
+% \end{lstlisting}
+
+\section{测试方案与结果分析}
+    % 本章节对应评分标准中的“测试方案与测试结果”。
+\subsection{测试方案}
+    \begin{itemize}
+        \item \textbf{测试环境：} [描述测试场地、环境条件等，需与题目要求一致]。
+        \item \textbf{测试仪器：} [列出所用仪器，如示波器、万用表、频谱仪、秒表、卷尺等]。
+        \item \textbf{测试方法：} 针对赛题要求的各项测试指标，分别进行测试。描述清楚每个指标的具体测试步骤、操作方法和数据记录方式。
+    \end{itemize}
+
+\subsection{测试结果与数据}
+    % 使用表格清晰展示测试结果，并与题目指标进行对照。
+    % 写作提醒：建议每项指标至少测试3次，避免偶然值。
+    \begin{table}[H]
+        \centering
+        \caption{测试项(1) [测试项名称] (要求: [指标要求])}
+        \label{tab:task1}
+        \begin{tabular}{ccccc}
+            \toprule
+            测试序号 & 理论值(单位) & 实测值(单位) & 是否满足要求 & 备注 \\
+            \midrule
+            1 & & & & \\
+            2 & & & & \\
+            3 & & & & \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \caption{测试项(2) [测试项名称] (要求: [指标要求])}
+        \label{tab:task2}
+        \begin{tabular}{ccccc}
+            \toprule
+            测试序号 & 理论值(单位) & 实测值(单位) & 是否满足要求 & 备注 \\
+            \midrule
+            1 & & & & \\
+            2 & & & & \\
+            3 & & & & \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+    
+    % ... 根据需要为更多测试项创建表格 ...
+
+\subsection{误差/性能分析}
+    % 分析实际运行中可能出现的误差来源或性能瓶颈，并提出改进方向。
+    \begin{enumerate}
+        \item \textbf{[误差/瓶颈来源一]：} [详细描述该问题及其对系统的影响]。改进方法：[提出具体的改进措施或优化方向]。
+        \item \textbf{[误差/瓶颈来源二]：} [详细描述该问题及其对系统的影响]。改进方法：[提出具体的改进措施或优化方向]。
+        \item \textbf{[误差/瓶颈来源三]：} [详细描述该问题及其对系统的影响]。改进方法：[提出具体的改进措施或优化方向]。
+    \end{enumerate}
+
+\section{结论}
+\subsection{已达到的指标与功能}
+% 写作提醒：此处逐条对应题目“基本要求/发挥部分”指标，用“是否达成+证据”写法。
+\noindent 示例写法（可直接替换为你的数据）：
+\noindent 作品达到了题目所有基本和部分扩展功能及指标的要求：
+\begin{enumerate}
+    \item 最大电压增益 $A_v \geq 60\,\mathrm{dB}$，输入电压有效值 $V_i \leq 10\,\mathrm{mV}$。
+    \item 在 $A_v = 40\,\mathrm{dB}$ 时，输出端噪声电压峰-峰值 $V_{\mathrm{ONPP}} \leq 0.03\,\mathrm{V}$。
+    \item 最大输出电压正弦波有效值 $V_o \geq 5\,\mathrm{V}$，输出信号波形无明显失真。
+    \item 电压增益 $A_v$ 可预置并显示，预置范围为 $0\sim 60\,\mathrm{dB}$，步距为 $5\,\mathrm{dB}$，并且可以手动连续调节；放大器带宽可预置并显示（$5\,\mathrm{MHz}$、$10\,\mathrm{MHz}$ 两点），通频带内增益起伏 $\leq 1\,\mathrm{dB}$。
+    \item 通过制作开关电源提高电源效率\textsuperscript{[1]}。
+    \item 本设计多使用集成芯片，以较低成本实现题目要求\textsuperscript{[2]}。
+\end{enumerate}
+% 上标引用也可写为：通过制作开关电源提高电源效率\cite{ref1}。
+
+\subsection{未达到指标与原因分析}
+% 写作提醒：不要只写“未达标”，应给出“原因 + 改进方向”。
+\begin{enumerate}
+    \item \textbf{[未达标指标1]：} [原因分析]。改进方向：[改进措施]。
+    \item \textbf{[未达标指标2]：} [原因分析]。改进方向：[改进措施]。
+    \item \textbf{[未达标指标3]：} [原因分析]。改进方向：[改进措施]。
+\end{enumerate}
+
+\begin{thebibliography}{99}
+% 写作提醒：
+% 1) 若列出参考文献，正文中必须有对应引用（如 \cite{ref1}）。
+% 2) 参考文献顺序应与正文首次出现顺序一致。
+% 3) 常见文献类型：专著[M]、论文集[C]、报纸[N]、期刊[J]、学位论文[D]、报告[R]、标准[S]、专利[P]。
+\bibitem{ref1} 作者A, 作者B. 文献题名[文献类型]. 期刊或出版社, 年份, 卷(期): 起止页码.
+\bibitem{ref2} 张三, 李四, 王五, 赵六. 基于近场声全息的电力变压器声场重建[J]. 陕西电力, 2017, 6(1): 7--10.
+\bibitem{ref3} 专著［M］、论文集［C］、报纸文章［N］、期刊文章［J］、学位论文［D］、报告［R］、标准［S］、专利［P］
+\bibitem{ref4} 搞了参考文献就要在文中引用。参考文献不会弄就别弄，没规定必须要加参考文献。参考文献列表中的顺序要与参考文献在文中出现的顺序一致。如第五章（5）、（6）中所示
+\end{thebibliography}
+
+\newpage
+\appendix
+\section{附录}
+\subsection{附录1}
+如果图、表多了或者你觉得有必要把关键代码给专家展示，导致正文页数超过8页的要求时，就把相关图表放到附录里。但关键图、表还是得留在正文中，不能一股脑所有图标都往附录放。附录不算正文。
+
+\end{document}
