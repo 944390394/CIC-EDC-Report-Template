@@ -36,18 +36,9 @@ Template-for-Electrical-Competition-Report-main/
 ## 使用流程（3 步）
 
 ### 1) 环境准备
-
-安装任一 LaTeX 发行版：
-
-- [TeX Live](https://www.tug.org/texlive/)（Windows / Linux / macOS）
-- [MiKTeX](https://miktex.org/)（Windows）
-- [MacTeX](https://www.tug.org/mactex/)（macOS）
-
-推荐编辑器（任选）：
-
-- VS Code + LaTeX Workshop
-- TeXstudio
-- TeXworks
+推荐参考texlive+TeXstudio安装保姆教程
+2025 最新LaTeX【texlive+TeXstudio】安装保姆教程
+https://zhuanlan.zhihu.com/p/1921310237857648721
 
 ### 2) 内容替换
 
